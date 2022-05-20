@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Phase-4 Project</title>
+  </head>
+  <body>
+      <h1>Online Examination Portal</h1>
+      <h3>Examination Format:Multiple choice questions</h2>
+      <h3>Subject:HTML/Css/JavaScript</h2>
+      <h4 style="text-align: end;">Marks:25 Marks</h2>
+
+        <form>
+         <div id="demo"></div>
+         <button onclick="displayRadioValue()">Submit</button>
+         <div id="demo1"></div>
+        </form>
+
+        <script>
+          function displayRadioValue(){
+                      var result=0;
+                       for(var i=0;i<arr.length;i++)
+                       {
+                         var ele=document.getElementsByName(i);
+                         
+                         for(var j=0;j<ele.length;j++)
+                         {
+                           if(ele[j].checked){
+                             if(ele[j].value==arr[i].correct){
+                             result++;
+                             }
+                         
+                           }
+                         
+                         }
+                         
+                       }
+                       document.write("<h1>Secured Score</h1>")
+                      document.write("<h1>"+result+"</h1>");                  
+                     }
+          var arr=[{"sno":"1",
+                    "question":"An HTML document can contain_____",
+                     "option1":"Attributes",
+                     "option2":"Tags",
+                     "option3":"Alloftheabove",
+                     "correct":"Alloftheabove"
+                    },{"sno":"2",
+                    "question":"A page designed in HTML is called _____",
+                     "option1":"Application",
+                     "option2":"WebPage",
+                     "option3":"Cover page",
+                     "correct":"WebPage"
+                    },{"sno":"3",
+                    "question":"An HTML document is saved with the ______ extension.",
+                     "option1":".htl",
+                     "option2":".html",
+                     "option3":".hml",
+                     "correct":".html"
+                    },{"sno":"4",
+                    "question":"The HTML document contains a root tag called ______",
+                     "option1":"Head",
+                     "option2":"Body",
+                     "option3":"Alloftheabove",
+                     "correct": "Alloftheabove"
+                    },{"sno":"5",
+                    "question":"Can we align an element by setting margin-left and margin-right ?",
+                     "option1":"Yes it's possible",
+                     "option2":"No,it's not possible",
+                     "option3":"may be",
+                     "correct":"Yes it's possible"
+                    },{"sno":"5",
+                    "question":"Can we define the direction of the text via a css property?",
+                     "option1":"Yes it's possible",
+                     "option2":"No,it's not possible",
+                     "option3":"may be",
+                     "correct":"Yes it's possible"
+                    },{"sno":"6",
+                    "question":"Choose the correct HTML tag for a large title",
+                     "option1":"H1",
+                     "option2":"Heading",
+                     "option3":"Head",
+                     "correct":"H1"
+                    },{"sno":"7",
+                    "question":"If we want to place text around an image, which CSS property should we use ?",
+                     "option1":"Push",
+                     "option2":"float",
+                     "option3":"wrap",
+                     "correct":"float"
+                    },{"sno":"8",
+                    "question":"Javascript is an ______ language ?",
+                     "option1":"Object-Oriented",
+                     "option2":"Object-Based",
+                     "option3":"Procedural",
+                     "correct":"Object-Oriented"
+                    },{"sno":"9",
+                    "question":"Which of the following keywords is used to define a variable in Javascript ?",
+                     "option1":"var",
+                     "option2":"let",
+                     "option3":"Alloftheabove",
+                     "correct":"Alloftheabove"
+                    },{"sno":"10",
+                    "question":"Which of the following methods is used to access HTML elements using Javascript ?",
+                     "option1":"getElementbyId()",
+                     "option2":"getElementByClassName()",
+                     "option3":"Alloftheabove",
+                     "correct":"Alloftheabove"
+                    }];
+                     let x="";
+                     for(var i=0;i<arr.length;i++)
+                     {
+                       x+="<div name="+arr[i].sno+">"+arr[i].sno+")"+"&nbsp;"+arr[i].question+"<br>"+"<input name="+i+" "+"type='radio'"+" "+"value="+arr[i].option1+">"+arr[i].option1+"<br>"+"<input name="+i+" "+"type='radio'"+" "+"value="+arr[i].option2+">"+arr[i].option2+"<br>"+"<input name="+i+" "+"type='radio'"+" "+"value="+arr[i].option3+">"+arr[i].option3+"<br><br>"+"</div>";
+                     }
+                     
+                     
+                     document.getElementById("demo").innerHTML=x;
+
+
+
+        </script>
+  </body>
+</html>
